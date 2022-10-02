@@ -42,15 +42,27 @@ while (i < size)
 
 
 printf("Printing array backwards: \n");
+
 // to print array backwards
-for (i = size - 1; i >= 0; i--)
-printf("%d \n", a[i]);
+i = size-1;
+while (i >= 0)
+{
+    printf("%d \n", a[i]);
+    i--;
+}
 
 
-printf("We will free memory and after that, try to print our array which cannot be done. \n");
+printf("We will free memory and after that and try to print our array - which cannot be done. \n");
+
 // to free memory and prove it is free
 free(a);
-for (i = 0; i < size; i++)
-printf("%d \n", a[i]);
+
+i = 0;
+while (i < size)
+{
+    printf("%d \n", a[i]);
+    i++;
+}
+
 
 }
